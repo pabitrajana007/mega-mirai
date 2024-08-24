@@ -418,3 +418,51 @@ form button:hover {
     font-size: 1.2rem;
   }
 }
+
+/* Ensure the video is positioned behind everything */
+.background-clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Behind all other content */
+}
+
+/* Content Overlay */
+.content-overlay {
+  position: relative;
+  z-index: 1; /* Above the video */
+  padding: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for readability */
+}
+
+/* Address and Map Section */
+.address-map {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Optional: background for better readability */
+  border-radius: 8px;
+}
+
+.address {
+  flex: 1;
+  padding: 20px;
+}
+
+.map {
+  flex: 1;
+  padding: 20px;
+}
+
+.map iframe {
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+}
