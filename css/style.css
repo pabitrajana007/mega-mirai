@@ -180,7 +180,7 @@ main {
   transition: 2000ms ease;
 }
 
-/*contact form */
+/* Contact Form */
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -213,6 +213,7 @@ form button {
 form button:hover {
   background-color: #555;
 }
+
 /* Footer Styles */
 .footer {
   background-color: #f1f1f1;
@@ -273,12 +274,14 @@ form button:hover {
   color: #333;
   font-size: 1.5rem;
 }
+
 .newsletter {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .newsletter p {
   margin-bottom: 10px;
 }
@@ -330,6 +333,35 @@ form button:hover {
   font-size: 1.5rem;
 }
 
+/* Address and Map Section */
+.address-map {
+  display: flex;
+  flex-wrap: wrap; /* Wrap columns on smaller screens */
+  gap: 20px; /* Add spacing between columns */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Optional: background for better readability */
+  border-radius: 8px;
+}
+
+.address {
+  flex: 1; /* Take up available space */
+  padding: 20px;
+  text-align: left; /* Align text to left on larger screens */
+}
+
+.map {
+  flex: 1; /* Take up available space */
+  padding: 20px;
+}
+
+.map iframe {
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  height: 500px; /* Adjust height for desktop */
+}
+
+/* Responsive adjustments for small screens */
 @media (max-width: 768px) {
   nav ul {
     display: none;
@@ -378,12 +410,21 @@ form button:hover {
     text-align: center;
     gap: 10px;
   }
+
+  .address-map {
+    flex-direction: column; /* Ensure vertical stacking on tablets */
+  }
+
+  .map iframe {
+    height: 250px; /* Adjust iframe height on tablets */
+  }
 }
 
 @media (max-width: 500px) {
   #company-title {
     font-size: 16px;
   }
+
   .hero-title {
     top: 25%;
   }
@@ -417,6 +458,14 @@ form button:hover {
   .menu ul a {
     font-size: 1.2rem;
   }
+
+  .address-map {
+    padding: 10px; /* Reduced padding for mobile screens */
+  }
+
+  .map iframe {
+    height: 200px; /* Adjust iframe height for mobile screens */
+  }
 }
 
 /* Ensure the video is positioned behind everything */
@@ -437,34 +486,6 @@ form button:hover {
   padding: 20px;
   color: white;
   background: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for readability */
-}
-
-/* Address and Map Section */
-.address-map {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 20px 0;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8); /* Optional: background for better readability */
-  border-radius: 8px;
-}
-
-.address {
-  flex: 1;
-  padding: 20px;
-}
-
-.map {
-  flex: 1;
-  padding: 20px;
-}
-
-.map iframe {
-  border: none;
-  border-radius: 8px;
-  width: 100%;
-  height: 400px; /* Adjust as needed */
 }
 
 #servies-bg{
