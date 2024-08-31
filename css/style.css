@@ -73,7 +73,7 @@ main {
 #brand {
   font-weight: 700;
   font-size: larger;
-  color: aqua;
+  color: #0000CD;
 }
 
 .home {
@@ -81,14 +81,14 @@ main {
 }
 .home:hover {
   text-decoration: underline;
-  text-decoration-color: aqua;
+  text-decoration-color: blue;
   text-decoration-thickness: 3px;
   text-underline-offset: 5px;
 }
 
 .active {
   text-decoration: underline;
-  text-decoration-color: aqua;
+  color: blue;
   text-decoration-thickness: 3px;
   text-underline-offset: 5px;
   font-weight: bold;
@@ -96,9 +96,10 @@ main {
 
 #company-title {
   font-size: 20px;
-  color: aqua;
+  color: #4169E1;
   padding: 2px;
-  font-weight: 700;
+  font-weight: bold; /* Set to bold */
+  font-family: "Arial Black", Arial, sans-serif; /* Changed to Arial Black */
   text-transform: uppercase;
   letter-spacing: 4px;
 }

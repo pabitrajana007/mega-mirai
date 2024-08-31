@@ -1,170 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="header.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li id="company-title">Mega Group</li>
-        </ul>
-        <ul>
-          <li id="activeHome"><a href="index.html" class="home">Home</a></li>
-          <li><a href="services.html" class="home">Services</a></li>
-          <li><a href="about.html" class="home">About Us</a></li>
-          <li><a href="contact.html" class="home">Contact</a></li>
-        </ul>
-        <svg
-          onclick="openMenu()"
-          xmlns="http://www.w3.org/2000/svg"
-          height="24px"
-          viewBox="0 -960 960 960"
-          width="24px"
-          fill="#e8eaed"
-        >
-          <path
-            d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-            class="menu-icon"
-          />
-        </svg>
-      </nav>
-    </header>
-    <div class="menu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="header.css" />
+  <style>
+    /* Modernize the contact form and address section */
+    .content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .content-overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    form label {
+      font-size: 0.9rem;
+    }
+
+    form input, form textarea {
+      border: none;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .address-map {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: #f8f9fa;
+    }
+
+    .address {
+      max-width: 400px;
+    }
+
+    .address h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .address p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .contact-info a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
       <ul>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24px"
-          viewBox="0 -960 960 960"
-          width="24px"
-          fill="#33333"
-          onclick="closeMenu()"
-        >
-          <path
-            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-          />
-        </svg>
+        <li id="company-title">MegaMirai India</li>
+      </ul>
+      <ul>
         <li id="activeHome"><a href="index.html" class="home">Home</a></li>
-        <li><a href="services.html" class="home">Services</a></li>
+        <li><a href="partnership.html" class="home">Partnerships</a></li>
         <li><a href="about.html" class="home">About Us</a></li>
         <li><a href="contact.html" class="home">Contact</a></li>
       </ul>
+      <svg onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" class="menu-icon" />
+      </svg>
+    </nav>
+  </header>
+  <div class="menu">
+    <ul>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#33333" onclick="closeMenu()">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 13l-5-5-5 5h10z"/>
+      </svg>
+      <li id="activeHome"><a href="index.html" class="home">Home</a></li>
+      <li><a href="partnership.html" class="home">Partnerships</a></li>
+      <li><a href="about.html" class="home">About Us</a></li>
+      <li><a href="contact.html" class="home">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Background Video -->
+  <video autoplay loop muted playsinline class="background-clip">
+    <source src="assets/bg-clip.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content Section -->
+  <main class="content-wrapper">
+    <div class="content-overlay">
+      <h1>Contact Us</h1>
+      <p>Get in touch with us through the following means:</p>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </div>
-    
-    <!-- Background Video -->
-    <video autoplay loop muted playsinline class="background-clip">
-      <source src="assets/bg-clip.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    
-    <!-- Content Section -->
-    <main class="content-wrapper">
-      <div class="content-overlay">
-        <h1>Contact Us</h1>
-        <p>Get in touch with us through the following means:</p>
-        <form id="contactForm">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-          <button type="submit">Send</button>
+  </main>
+
+  <!-- Address and Map Section -->
+  <section class="address-map">
+    <div class="address">
+      <h2>Our Address</h2>
+      <p>
+        A-1, 1st Floor<br>
+        Hamilton House<br>
+        Connaught Place<br>
+        Central Delhi<br>
+        New Delhi, 110001<br>
+        India
+      </p>
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <p>Phone: <a href="tel:+911123456789">03-5458-2311</a></p>
+        <p>Email: <a href="mailto:info@megagroup.com">info@megamirai.com</a></p>
+      </div>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.039501507926!2d77.21896347699388!3d28.6321725823315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3f5b0ddfcfb%3A0x6b8bdf3a987ea599!2sHamilton%20House%2C%20Connaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001%2C%20India!5e0!3m2!1sen!2sin!4v1693501992455!5m2!1sen!2sin"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-hidden="false"
+      ></iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2 class="footer-brand">MEGAMIRAI INDIA</h2>
+        <p>Discover sustainable products that are good for the planet.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">All Products</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Home Goods</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>About</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section newsletter">
+        <h3>Newsletter</h3>
+        <p>
+          Sign up for our newsletter to stay up-to-date on the latest
+          eco-friendly products and promotions.
+        </p>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
         </form>
       </div>
-    </main>
-    
-    <!-- Address and Map Section -->
-<section class="address-map">
-  <div class="address">
-    <h2>Our Address</h2>
-    <p>
-      MegaMirai India<br>
-      123 Business Avenue<br>
-      Connaught Place<br>
-      New Delhi, 110001<br>
-      India
-    </p>
-  </div>
-  <div class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.218142372544!2d77.21534521508259!3d28.628487982437697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3f5c68c9b35%3A0x8a0e9c99ebd507a3!2sConnaught%20Place%2C%20New%20Delhi%2C%20Delhi%20110001%2C%20India!5e0!3m2!1sen!2sus!4v1679617161033!5m2!1sen!2sus"
-      width="100%"
-      height="400"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      aria-hidden="false"
-    ></iframe>
-  </div>
-</section>
-
-    
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section">
-          <h2 class="footer-brand">MEGA GROUP</h2>
-          <p>Discover sustainable products that are good for the planet.</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="footer-section">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#">All Products</a></li>
-            <li><a href="#">Clothing</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Home Goods</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>About</h3>
-          <ul>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Help</h3>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div class="footer-section newsletter">
-          <h3>Newsletter</h3>
-          <p>
-            Sign up for our newsletter to stay up-to-date on the latest
-            eco-friendly products and promotions.
-          </p>
-          <form>
-            <input type="email" placeholder="Enter your email" />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MegaMirai India. All rights reserved.</p>
+      <div class="footer-icons">
+        <i class="fas fa-recycle"></i>
+        <i class="fas fa-leaf"></i>
+        <i class="fas fa-tree"></i>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Mega Group. All rights reserved.</p>
-        <div class="footer-icons">
-          <i class="fas fa-recycle"></i>
-          <i class="fas fa-leaf"></i>
-          <i class="fas fa-tree"></i>
-        </div>
-      </div>
-    </footer>
-    <script src="js/script.js"></script>
-    <script src="commonScript.js"></script>
-  </body>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+  <script src="commonScript.js"></script>
+</body>
 </html>
