@@ -5,7 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <style>
+      /* Style for the dropdown container */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+    
+      /* Style for the dropdown button */
+      .dropbtn {
+        cursor: pointer;
+        padding: 10px;
+        text-decoration: none;
+      }
+    
+      /* Dropdown content container */
+      .dropdown-content {
+        display: none; /* Hide by default */
+        position: absolute;
+        background-color: lightblue; /* Light blue background */
+        min-width: 200px; /* Adjust width as needed */
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
+      }
+    
+      /* Dropdown links */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #ddd; /* Adds a dividing line between items */
+      }
+    
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+    
+      /* Show dropdown content on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        height: auto; /* Expand height based on content */
+      }
+    
+      /* Add extra padding to the dropdown content for spacing */
+      .dropdown-content {
+        padding: 0; /* Remove default padding */
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -15,7 +70,13 @@
         </ul>
         <ul>
           <li id="activeHome"><a href="index.html" class="home">Home</a></li>
-          <li><a href="partnership.html" class="home">Partnerships</a></li>
+          <li class="dropdown">
+            <a href="partnership.html" class="home dropbtn">Partnerships</a>
+            <div class="dropdown-content">
+              <a href="https://www.mait.ac.in/">MAIT</a>
+              <a href="https://www.mega.co.jp/en/">MEGA</a>
+            </div>
+          </li>     
           <li><a href="about.html" class="home">About Us</a></li>
           <li><a href="contact.html" class="home">Contact</a></li>
         </ul>
@@ -49,7 +110,13 @@
           />
         </svg>
         <li id="activeHome"><a href="index.html" class="home">Home</a></li>
-        <li><a href="partnership.html" class="home">Partnerships</a></li>
+        <li class="dropdown">
+          <a href="partnership.html" class="home dropbtn">Partnerships</a>
+          <div class="dropdown-content">
+            <a href="https://www.mait.ac.in/">MAIT</a>
+            <a href="https://www.mega.co.jp/en/">MEGA</a>
+          </div>
+        </li>     
         <li><a href="about.html" class="home">About Us</a></li>
         <li><a href="contact.html" class="home">Contact</a></li>
       </ul>
@@ -58,81 +125,38 @@
       <h1>Our Services</h1>
       <p>Details about the services we offer.</p>
       <div>
-        <img id="servies-bg" src="./assets/bg2.png" alt="">
-        <h1>Real estate property mediation</h1>
+        <img id="servies-bg" src="./assets/mega edits.png" alt="">
+        <h1>Mega - MAIT Partnership</h1>
         <p>
-          We help select appropriate properties in consideration of location and structural characteristics. We also strive for reasonable real estate transactions, and have many repeat clients thanks to the know-how we provide through our partnerships with affiliated NPOs.
+          At Mega Group, we pride ourselves on delivering exceptional human resources support that goes beyond conventional recruitment services. Our expertise lies in managing job listings across a diverse array of recruiting platforms, ensuring that job seekers and employers are seamlessly connected. We specialize in providing comprehensive recruitment solutions that include targeted training programs and dynamic sales promotions designed to enhance the effectiveness of our clients' hiring strategies. Our commitment to excellence extends internationally as we play a pivotal role in bridging the gap between talent and opportunity.
         </p>
         <div class="service-images-combo">
-          <img src="./assets/real estate.webp" alt="">
-          <img src="./assets/building support.jpg" alt="">
+          <img src="./assets/mega-news1.jpg" alt="">
+          <img src="./assets/mega-news2.jpg" alt="">
         </div>
-        <h1> Office and Store Building Support        </h1>        
+        <h1>Maharaja Agrasen Institute of Technology - Delhi, India      </h1>        
         <p>
-          Based on the idea that "if the office changes, the people will change, and if the people change, the company will change", we will suggest the perfect work environment for you based on your work style, image, and the parts of your business you want to improve. We provide a one-stop service for everything to do with your office or store environment. What's more, we will put together a dedicated project team for you, and by carrying out design and construction in-house, reduce your operational labor and costs. We have a proven track record of about 10,000 installations, and we are chosen by a great number of customers.
+          Maharaja Agrasen Institute of Technology (MAIT) is established by Maharaja Agrasen Technical Education Society, in 1999. The society is promoted by a group of well known Industrialists, Businessmen, Professionals and Philanthropists with the aim to promote quality education in the field of technology. The promoters of the society have been involved in various activities related to basic and professional education, health care and have established a number of educational institutions consisting of Engineering College, Polytechnic, ITI and are also managing Five-Public Schools at various locations in Delhi. They have already setup Maharaja Agrasen Hospital with 300-beds having modern sophisticated machines in Delhi and running a Medical College and hospital at Agroha, HR.
         </p>
       </div>
     </main>
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section">
-          <h2 class="footer-brand">MEGAMIRAI INDIA</h2>
-          <p>Discover sustainable products that are good for the planet.</p>
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="footer-section">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#">All Products</a></li>
-            <li><a href="#">Clothing</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Home Goods</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>About</h3>
-          <ul>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Help</h3>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <!-- <div class="footer-section newsletter">
-          <h3>Newsletter</h3>
-          <p>
-            Sign up for our newsletter to stay up-to-date on the latest
-            eco-friendly products and promotions.
-          </p>
-          <form>
-            <input type="email" placeholder="Enter your email" />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div> -->
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 MegaMirai India. All rights reserved.</p>
-        <!-- <div class="footer-icons">
-          <i class="fas fa-recycle"></i>
-          <i class="fas fa-leaf"></i>
-          <i class="fas fa-tree"></i>
-        </div> -->
-      </div>
-    </footer>
-    <script src="js/script.js"></script>
-    <script src="commonScript.js"></script>
+    <!-- Footer Section -->
+  <div id="footer-container"></div>
+
+  <script src="js/script.js"></script>
+
+  <script>
+    // Load the footer HTML only once
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        // Make sure to only insert the footer if it hasn't been added yet
+        const footerContainer = document.querySelector('#footer-container');
+        if (!footerContainer.innerHTML.trim()) {
+          footerContainer.insertAdjacentHTML('beforeend', data);
+        }
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
   </body>
 </html>

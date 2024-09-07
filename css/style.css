@@ -215,124 +215,6 @@ form button:hover {
   background-color: #555;
 }
 
-/* Footer Styles */
-.footer {
-  background-color: #f1f1f1;
-  padding: 40px 20px;
-  color: #333;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 200px;
-  margin: 10px;
-}
-
-.footer-brand {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.footer-section h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-section ul li {
-  margin-bottom: 10px;
-}
-
-.footer-section ul li a {
-  color: #333;
-  text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-  text-decoration: underline;
-}
-
-.social-icons {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-  justify-content: center;
-}
-
-.social-icons a {
-  color: #333;
-  font-size: 1.5rem;
-}
-
-.newsletter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.newsletter p {
-  margin-bottom: 10px;
-}
-
-.newsletter form {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.newsletter input[type="email"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  flex: 1;
-}
-
-.newsletter button {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.newsletter button:hover {
-  background-color: #218838;
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 0;
-  border-top: 1px solid #ccc;
-  font-size: 0.9rem;
-}
-
-.footer-bottom .footer-icons {
-  display: flex;
-  gap: 15px;
-}
-
-.footer-bottom .footer-icons i {
-  color: #28a745;
-  font-size: 1.5rem;
-}
 
 /* Address and Map Section */
 .address-map {
@@ -397,27 +279,13 @@ form button:hover {
     width: 100%;
   }
 
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-section {
-    text-align: center;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
 
   .address-map {
     flex-direction: column; /* Ensure vertical stacking on tablets */
   }
 
   .map iframe {
-    height: 250px; /* Adjust iframe height on tablets */
+    height: 500px; /* Adjust iframe height on tablets */
   }
 }
 
@@ -465,7 +333,7 @@ form button:hover {
   }
 
   .map iframe {
-    height: 200px; /* Adjust iframe height for mobile screens */
+    height: 500px; /* Adjust iframe height for mobile screens */
   }
 }
 
@@ -498,3 +366,4 @@ form button:hover {
   margin: 2vw 0;
   display: flex;
 }
+

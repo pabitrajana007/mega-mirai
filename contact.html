@@ -5,8 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="footer.css" />
   <style>
+    /* Style for the dropdown container */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+    
+      /* Style for the dropdown button */
+      .dropbtn {
+        cursor: pointer;
+        padding: 10px;
+        text-decoration: none;
+      }
+    
+      /* Dropdown content container */
+      .dropdown-content {
+        display: none; /* Hide by default */
+        position: absolute;
+        background-color: lightblue; /* Light blue background */
+        min-width: 200px; /* Adjust width as needed */
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
+      }
+    
+      /* Dropdown links */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid #ddd; /* Adds a dividing line between items */
+      }
+    
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+    
+      /* Show dropdown content on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        height: auto; /* Expand height based on content */
+      }
+    
+      /* Add extra padding to the dropdown content for spacing */
+      .dropdown-content {
+        padding: 0; /* Remove default padding */
+      }
     /* Modernize the contact form and address section */
     .content-wrapper {
       display: flex;
@@ -59,6 +112,7 @@
       gap: 20px;
       padding: 40px 20px;
       background-color: #f8f9fa;
+      flex-wrap: wrap;
     }
 
     .address {
@@ -108,22 +162,53 @@
       </ul>
       <ul>
         <li id="activeHome"><a href="index.html" class="home">Home</a></li>
-        <li><a href="partnership.html" class="home">Partnerships</a></li>
+        <li class="dropdown">
+          <a href="partnership.html" class="home dropbtn">Partnerships</a>
+          <div class="dropdown-content">
+            <a href="https://www.mait.ac.in/">MAIT</a>
+            <a href="https://www.mega.co.jp/en/">MEGA</a>
+          </div>
+        </li>     
         <li><a href="about.html" class="home">About Us</a></li>
         <li><a href="contact.html" class="home">Contact</a></li>
       </ul>
-      <svg onclick="openMenu()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
-        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" class="menu-icon" />
+      <svg
+        onclick="openMenu()"
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#e8eaed"
+      >
+        <path
+          d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+          class="menu-icon"
+        />
       </svg>
     </nav>
   </header>
   <div class="menu">
     <ul>
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#33333" onclick="closeMenu()">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 13l-5-5-5 5h10z"/>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#33333"
+        onclick="closeMenu()"
+      >
+        <path
+          d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+        />
       </svg>
       <li id="activeHome"><a href="index.html" class="home">Home</a></li>
-      <li><a href="partnership.html" class="home">Partnerships</a></li>
+      <li class="dropdown">
+        <a href="partnership.html" class="home dropbtn">Partnerships</a>
+        <div class="dropdown-content">
+          <a href="https://www.mait.ac.in/">MAIT</a>
+          <a href="https://www.mega.co.jp/en/">MEGA</a>
+        </div>
+      </li>     
       <li><a href="about.html" class="home">About Us</a></li>
       <li><a href="contact.html" class="home">Contact</a></li>
     </ul>
@@ -184,66 +269,24 @@
     </div>
   </section>
   
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h2 class="footer-brand">MEGAMIRAI INDIA</h2>
-        <p>Discover sustainable products that are good for the planet.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h3>Services</h3>
-        <ul>
-          <li><a href="#">All Products</a></li>
-          <li><a href="#">Clothing</a></li>
-          <li><a href="#">Accessories</a></li>
-          <li><a href="#">Home Goods</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>About</h3>
-        <ul>
-          <li><a href="#">Our Story</a></li>
-          <li><a href="#">Sustainability</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Help</h3>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Shipping</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <!-- <div class="footer-section newsletter">
-        <h3>Newsletter</h3>
-        <p>
-          Sign up for our newsletter to stay up-to-date on the latest
-          eco-friendly products and promotions.
-        </p>
-        <form>
-          <input type="email" placeholder="Enter your email" />
-          <button type="submit">Subscribe</button>
-        </form>
-      </div> -->
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 MegaMirai India. All rights reserved.</p>
-      <!-- <div class="footer-icons">
-        <i class="fas fa-recycle"></i>
-        <i class="fas fa-leaf"></i>
-        <i class="fas fa-tree"></i>
-      </div> -->
-    </div>
-  </footer>
+  <!-- Footer Section -->
+  <div id="footer-container"></div>
+
   <script src="js/script.js"></script>
-  <script src="commonScript.js"></script>
+
+  <script>
+    // Load the footer HTML only once
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        // Make sure to only insert the footer if it hasn't been added yet
+        const footerContainer = document.querySelector('#footer-container');
+        if (!footerContainer.innerHTML.trim()) {
+          footerContainer.insertAdjacentHTML('beforeend', data);
+        }
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  </script>
+  
 </body>
 </html>
