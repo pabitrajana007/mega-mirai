@@ -61,6 +61,39 @@
       .dropdown-content {
         padding: 0; /* Remove default padding */
       }
+
+      /* Style for the scroll-to-top button */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    #scrollToTopBtn.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #scrollToTopBtn svg {
+      width: 24px;
+      height: 24px;
+      stroke: white;
+    }
+    
     </style>
     
 </head>
@@ -68,7 +101,7 @@
     <header>
         <nav>
             <ul>
-                <li id="company-title">MegaMirai India</li>
+                <li id="company-title">Mega Mirai India</li>
             </ul>
             <ul>
                 <li id="activeHome"><a href="index.html" class="home">Home</a></li>
@@ -105,11 +138,9 @@
         </ul>
     </div>
     <main>
-        <video autoplay loop muted plays-inline class="background-clip">
-            <source src="assets/bg.mp4" />
-        </video>
+      <img src="assets/1.png" alt="Background image" class="background-clip" />
         <div class="hero-title">
-            <h1>Welcome to <span id="brand"> MEGAMIRAI INDIA</span></h1>
+            <h1>Welcome to <span id="brand"> MEGA MIRAI INDIA</span></h1>
             <p>Aiming beyond customer satisfaction with heartfelt services</p>
             <p>
                 The MEGA.Group strives to touch every customer’s heart with total business support.
@@ -117,22 +148,31 @@
         </div>
     </main>
     <div class="section-2">
-        <h1>Our Services</h1>
+        <!-- <h1>Our Services</h1> -->
         <img id="servies-bg" src="./assets/bg2.png" alt="">
-        <section class="company-operations">
-            <h2>Company Overview</h2>
-            <br />
-            <p>
-                At MegaMirai India, we pride ourselves on delivering exceptional human resources support that goes beyond conventional recruitment services. Our expertise lies in managing job listings across a diverse array of recruiting platforms, ensuring that job seekers and employers are seamlessly connected. We specialize in providing comprehensive recruitment solutions that include targeted training programs and dynamic sales promotions designed to enhance the effectiveness of our clients' hiring strategies. Our commitment to excellence extends internationally as we play a pivotal role in bridging the gap between talent and opportunity.
-            </p>
-            <br />
-            <p>
-                Our operations are particularly focused on the international placement of Indian personnel, offering specialized services in supplying highly skilled IT professionals, including students, to the Japanese job market. We understand the complexities of cross-cultural employment, which is why we provide tailored Japanese language training to our candidates. This ensures that they are not only prepared to meet the demands of their roles but are also equipped to thrive in the unique cultural environment of Japan. In addition to IT professionals, we facilitate the placement of Indian experts in various other sectors, including nursing care and food processing, making a significant impact in multiple industries. By ensuring our personnel are well-prepared and culturally adept, we help them integrate smoothly into Japanese companies, fostering successful and long-lasting employment relationships. Through these efforts, Mega Group continues to be a bridge connecting diverse talent with global opportunities, driving both professional growth and international collaboration.
-            </p>
-        </section>
+        
     </div>
+    <section class="company-operations">
+      <h2>Company Overview</h2>
+      <br />
+      <p>
+          At MegaMirai India, we pride ourselves on delivering exceptional human resources support that goes beyond conventional recruitment services. Our expertise lies in managing job listings across a diverse array of recruiting platforms, ensuring that job seekers and employers are seamlessly connected. We specialize in providing comprehensive recruitment solutions that include targeted training programs and dynamic sales promotions designed to enhance the effectiveness of our clients' hiring strategies. Our commitment to excellence extends internationally as we play a pivotal role in bridging the gap between talent and opportunity.
+      </p>
+      <br />
+      <p>
+          Our operations are particularly focused on the international placement of Indian personnel, offering specialized services in supplying highly skilled IT professionals, including students, to the Japanese job market. We understand the complexities of cross-cultural employment, which is why we provide tailored Japanese language training to our candidates. This ensures that they are not only prepared to meet the demands of their roles but are also equipped to thrive in the unique cultural environment of Japan. In addition to IT professionals, we facilitate the placement of Indian experts in various other sectors, including nursing care and food processing, making a significant impact in multiple industries. By ensuring our personnel are well-prepared and culturally adept, we help them integrate smoothly into Japanese companies, fostering successful and long-lasting employment relationships. Through these efforts, Mega Group continues to be a bridge connecting diverse talent with global opportunities, driving both professional growth and international collaboration.
+      </p>
+  </section>
     <!-- Footer Section -->
     <div id="footer-container"></div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 15l7-7 7 7"></path>
+      </svg>
+    </button>
+
     <script src="js/script.js"></script>
     <script>
       // Load the footer HTML only once
@@ -148,6 +188,24 @@
           }
         })
         .catch(error => console.error('Error loading footer:', error));
+
+      // Show or hide the scroll-to-top button based on scroll position
+    window.addEventListener('scroll', () => {
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    // Smooth scroll to top
+    document.getElementById('scrollToTopBtn').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
     </script>
 </body>
 </html>

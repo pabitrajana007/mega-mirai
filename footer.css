@@ -53,6 +53,15 @@
     margin: 0;
 }
 
+.footer-toggle-link {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Uses the same color as the surrounding text */
+}
+
+.footer-toggle-link:hover {
+    color: #007bff; /* Optional: Change color on hover if desired */
+}
+
 /* Mobile view adjustments */
 @media screen and (max-width: 768px) {
     .footer-container {

@@ -60,13 +60,62 @@
       .dropdown-content {
         padding: 0; /* Remove default padding */
       }
+      /* Style for the scroll-to-top button */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    #scrollToTopBtn.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #scrollToTopBtn svg {
+      width: 24px;
+      height: 24px;
+      stroke: white;
+    }
+
+    /* Add space to the left and right of paragraphs */
+    main {
+      padding-left: 20px;
+      padding-right: 20px;
+      
+    }
+
+    body {
+    background: linear-gradient(135deg, #e0e7ff, #f3f4f6); /* Soft gradient from light blue to light gray */
+    color: #2c3e50; /* A darker, professional shade of blue-gray for text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and modern sans-serif font */
+    margin: 0;
+    padding: 0;
+}
+
+
+
     </style>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li id="company-title">MegaMirai India</li>
+          <li id="company-title">Mega Mirai India</li>
         </ul>
         <ul>
           <li id="activeHome"><a href="index.html" class="home">Home</a></li>
@@ -125,9 +174,10 @@
       <h1>Our Services</h1>
       <p>Details about the services we offer.</p>
       <div>
-        <img id="servies-bg" src="./assets/mega edits.png" alt="">
+        <img id="servies-bg" src="./assets/mega-flowchart.jpg" alt="" style="padding-right: 40px;">
+
         <h1>Mega - MAIT Partnership</h1>
-        <p>
+        <p style="text-align: justify;">
           At Mega Group, we pride ourselves on delivering exceptional human resources support that goes beyond conventional recruitment services. Our expertise lies in managing job listings across a diverse array of recruiting platforms, ensuring that job seekers and employers are seamlessly connected. We specialize in providing comprehensive recruitment solutions that include targeted training programs and dynamic sales promotions designed to enhance the effectiveness of our clients' hiring strategies. Our commitment to excellence extends internationally as we play a pivotal role in bridging the gap between talent and opportunity.
         </p>
         <div class="service-images-combo">
@@ -135,13 +185,20 @@
           <img src="./assets/mega-news2.jpg" alt="">
         </div>
         <h1>Maharaja Agrasen Institute of Technology - Delhi, India      </h1>        
-        <p>
+        <p style="text-align: justify;">
           Maharaja Agrasen Institute of Technology (MAIT) is established by Maharaja Agrasen Technical Education Society, in 1999. The society is promoted by a group of well known Industrialists, Businessmen, Professionals and Philanthropists with the aim to promote quality education in the field of technology. The promoters of the society have been involved in various activities related to basic and professional education, health care and have established a number of educational institutions consisting of Engineering College, Polytechnic, ITI and are also managing Five-Public Schools at various locations in Delhi. They have already setup Maharaja Agrasen Hospital with 300-beds having modern sophisticated machines in Delhi and running a Medical College and hospital at Agroha, HR.
         </p>
       </div>
     </main>
     <!-- Footer Section -->
   <div id="footer-container"></div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 15l7-7 7 7"></path>
+    </svg>
+  </button>
 
   <script src="js/script.js"></script>
 
@@ -157,6 +214,24 @@
         }
       })
       .catch(error => console.error('Error loading footer:', error));
+
+    // Show or hide the scroll-to-top button based on scroll position
+    window.addEventListener('scroll', () => {
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    // Smooth scroll to top
+    document.getElementById('scrollToTopBtn').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   </script>
   </body>
 </html>

@@ -66,24 +66,94 @@
           }
 
        /* Include styles for the updated section here */
-        .company-operations {
-            background: #e3f2fd; /* Light blue for a modern aesthetic */
-            padding: 20px;
+       .company-operations {
+            background: #f0f4f8;  /* Clean white background for a professional look */
+            padding: 40px 30px;
+            border-left: 5px solid #0077b6; /* A bold left border to add a visual accent */
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Light shadow for a floating effect */
+            margin-top: 30px;
+            
+            
+            transition: transform 0.2s ease-in-out; /* Adds a subtle hover effect */
+        }
+
+        .company-operations:hover {
+            transform: translateY(-5px); /* Lifts the section slightly on hover */
         }
 
         .company-operations h2 {
-            color: #0277bd; /* Darker blue for the heading */
-            margin-bottom: 15px;
+            color: #005f73; /* A modern and calm dark teal color for the heading */
+            font-size: 1.75rem;
+            font-weight: 700; /* Bold for emphasis */
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #dce2e8; /* Subtle underline to separate heading */
         }
 
         .company-operations p {
-            line-height: 1.6;
-            color: #01579b; /* Even darker blue for the text */
-            margin-bottom: 15px;
+            line-height: 1.7;
+            color: #333333; /* Neutral dark gray for easy reading */
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+            text-align: justify; /* Keeps the text neatly aligned */
+            padding-left: 10px; /* Aligns with the border for visual balance */
         }
+
+        .company-operations p:last-child {
+            margin-bottom: 0; /* No margin for the last paragraph */
+        }
+
+        @media (max-width: 768px) {
+            .company-operations {
+                padding: 30px 20px; /* Adjust padding for smaller screens */
+            }
+
+            .company-operations h2 {
+                font-size: 1.5rem; /* Smaller heading size on mobile */
+            }
+        }
+
+
+        #scrollToTopBtn {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          cursor: pointer;
+          opacity: 0;
+          visibility: hidden;
+          transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        #scrollToTopBtn.show {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        #scrollToTopBtn svg {
+          width: 24px;
+          height: 24px;
+          stroke: white;
+        }
+
+        body {
+        background: linear-gradient(135deg, #e0e7ff, #f3f4f6); /* Soft gradient from light blue to light gray */
+        color: #2c3e50; /* A darker, professional shade of blue-gray for text */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and modern sans-serif font */
+        margin: 0;
+        padding: 0;
+    }
+
 
     </style>
 </head>
@@ -91,7 +161,7 @@
     <header>
         <nav>
             <ul>
-                <li id="company-title">MegaMirai India</li>
+                <li id="company-title">Mega Mirai India</li>
             </ul>
             <ul>
                 <li id="activeHome"><a href="index.html" class="home">Home</a></li>
@@ -151,7 +221,7 @@
         <div class="section-2">
             <h1>Our Team</h1>
             <div class="carousal">
-                <img src="assets\group-photo3.jpg" width="100%" height="100%" class="card" />
+                <img src="assets\neelsus.jpg" width="100%" height="150%" class="card"/>
                 <img src="assets\group-photo4.jpg" width="100%" height="100%" class="card" />
                 <img src="assets\group-photo1.jpg" width="100%" height="100%" class="card" />
                 <img src="assets\group-photo2.jpg" width="100%" height="100%" class="card" />
@@ -171,6 +241,13 @@
     <!-- Footer Section -->
   <div id="footer-container"></div>
 
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 15l7-7 7 7"></path>
+    </svg>
+  </button>
+
   <script src="js/script.js"></script>
 
   <script>
@@ -185,6 +262,24 @@
         }
       })
       .catch(error => console.error('Error loading footer:', error));
+
+    // Show or hide the scroll-to-top button based on scroll position
+    window.addEventListener('scroll', () => {
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    // Smooth scroll to top
+    document.getElementById('scrollToTopBtn').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   </script>
 </body>
 </html>
