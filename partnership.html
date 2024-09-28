@@ -7,90 +7,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="footer.css" />
     <style>
-      /* Style for the dropdown container */
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
-    
-      /* Style for the dropdown button */
-      .dropbtn {
-        cursor: pointer;
-        padding: 10px;
-        text-decoration: none;
-      }
-    
-      /* Dropdown content container */
-      .dropdown-content {
-        display: none; /* Hide by default */
-        position: absolute;
-        background-color: lightblue; /* Light blue background */
-        min-width: 200px; /* Adjust width as needed */
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-        opacity: 0;
-        visibility: hidden;
-        height: 0;
-        overflow: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
-      }
-    
-      /* Dropdown links */
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        border-bottom: 1px solid #ddd; /* Adds a dividing line between items */
-      }
-    
-      .dropdown-content a:hover {
-        background-color: #f1f1f1;
-      }
-    
-      /* Show dropdown content on hover */
-      .dropdown:hover .dropdown-content {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-        height: auto; /* Expand height based on content */
-      }
-    
-      /* Add extra padding to the dropdown content for spacing */
-      .dropdown-content {
-        padding: 0; /* Remove default padding */
-      }
-      /* Style for the scroll-to-top button */
-    #scrollToTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-    }
-
-    #scrollToTopBtn.show {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    #scrollToTopBtn svg {
-      width: 24px;
-      height: 24px;
-      stroke: white;
-    }
+      
+      
 
     /* Add space to the left and right of paragraphs */
     main {
@@ -119,13 +37,7 @@
         </ul>
         <ul>
           <li id="activeHome"><a href="index.html" class="home">Home</a></li>
-          <li class="dropdown">
-            <a href="partnership.html" class="home dropbtn">Partnerships</a>
-            <div class="dropdown-content">
-              <a href="https://www.mait.ac.in/">MAIT</a>
-              <a href="https://www.mega.co.jp/en/">MEGA</a>
-            </div>
-          </li>     
+          <li><a href="partnership.html" class="home">Partnerships</a></li> 
           <li><a href="about.html" class="home">About Us</a></li>
           <li><a href="contact.html" class="home">Contact</a></li>
         </ul>
@@ -159,13 +71,7 @@
           />
         </svg>
         <li id="activeHome"><a href="index.html" class="home">Home</a></li>
-        <li class="dropdown">
-          <a href="partnership.html" class="home dropbtn">Partnerships</a>
-          <div class="dropdown-content">
-            <a href="https://www.mait.ac.in/">MAIT</a>
-            <a href="https://www.mega.co.jp/en/">MEGA</a>
-          </div>
-        </li>     
+        <li><a href="partnership.html" class="home">Partnerships</a></li>    
         <li><a href="about.html" class="home">About Us</a></li>
         <li><a href="contact.html" class="home">Contact</a></li>
       </ul>
